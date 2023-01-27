@@ -337,7 +337,7 @@
             <div class="row justify-content-center mt-4 mb-4">
 <%--        <div class="statusBtn">--%>
             <button class="btn btn-secondary storageBtn col-auto">취소</button>
-            <button class="btn btn-secondary submitBtn col-auto">재승인</button>
+            <button class="btn btn-secondary submitBtn col-auto">승인요청</button>
         </div>
     </div>
 </div>

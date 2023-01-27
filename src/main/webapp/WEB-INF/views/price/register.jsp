@@ -522,7 +522,7 @@
                 console.log(data)
                 if (data >= 1) {
                     alert(data + "개의 판매가 등록이 완료되었습니다.")
-                    location.href = "/price/list";
+                    location.href = "/sharedFive/price/list";
 
                 } else {
                     alert("추가된 판매가 테이블을 확인해주세요.")

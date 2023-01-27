@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("main")
 public class SampleController {
 
-    @Autowired
-    private SampleService sampleService;
+//    @Autowired
+//    private SampleService sampleService;
 
     @GetMapping("main")
     public void main() {

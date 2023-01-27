@@ -34,6 +34,10 @@
             --bs-gutter-x: 0;
         }
 
+        .gray {
+            background-color: #e9ecef;
+        }
+
         .table {
             --bs-table-bg: #fff;
         }
@@ -192,29 +196,47 @@
                 <tr>
                     <td class="table-active">제품그룹</td>
                     <td id="itemGroup" class="inputLength" style="">
-                        <select id="groupSelect" name="m_item_group" class="form-select">
-                            <option class="" value="">=== 선택 ===</option>
-                            <option  id="modifyGroup" value="${getItem.m_item_group}">${getItem.m_item_group}</option>
-                            <c:forEach items="${groupList}" var="groupList">
-                                <option class="non" value="${groupList.m_item_group}">${groupList.m_item_group}</option>
-                            </c:forEach>
-                            <option class="GroupEditable" value="입력">입력</option>
-                        </select>
-                        <input type="hidden" class="groupEditOption form-control" value="${getItem.m_item_group}" autocomplete='off'
+                        <c:if test="${getItem.m_item_group eq null}">
+                            <select id="groupSelect" name="m_item_group" class="form-select">
+                                <option class="" value="">=== 선택 ===</option>
+                                <option id="modifyGroup"
+                                        value="${getItem.m_item_group}">${getItem.m_item_group}</option>
+                                <c:forEach items="${groupList}" var="groupList">
+                                    <option class="non"
+                                            value="${groupList.m_item_group}">${groupList.m_item_group}</option>
+                                </c:forEach>
+                                <option class="GroupEditable" value="입력">입력</option>
+                            </select>
+                        </c:if>
+                        <c:if test="${getItem.m_item_group ne null}">
+                            <input type="text" name="m_item_group" class="form-control gray" readonly
+                                   value="${getItem.m_item_group}">
+                        </c:if>
+                        <input type="hidden" class="groupEditOption form-control" value="${getItem.m_item_group}"
+                               autocomplete='off'
                                style="width: 280px; border-bottom-right-radius: 0;border-top-right-radius: 0;">
                     </td>
                     <td class="table-active">제조사</td>
                     <td id="itemManufacturer" class="inputLength">
-                        <select id="manufacturerSelect" name="m_item_manufacturer" class="form-select" value="null">
-                            <option class="" value="">=== 선택 ===</option>
-                            <option id="modifyManufacturer" value="${getItem.m_item_manufacturer}">${getItem.m_item_manufacturer}</option>
-<%--                            <c:forEach items="${manufacturerList}" var="manufacturerList">--%>
-<%--                                <option class="non"--%>
-<%--                                        value="${manufacturerList.m_item_manufacturer}">${manufacturerList.m_item_manufacturer}</option>--%>
-<%--                            </c:forEach>--%>
-                            <option class="manufacturerEditable" value="입력">입력</option>
-                        </select>
-                        <input type="hidden" class="manufacturerEditOption form-control" value="${getItem.m_item_manufacturer}" autocomplete='off'  onkeydown="activeBtn()"
+                        <c:if test="${getItem.m_item_manufacturer eq null}">
+                            <select id="manufacturerSelect" name="m_item_manufacturer" class="form-select"
+                                    value="null">
+                                <option class="" value="">=== 선택 ===</option>
+                                <option id="modifyManufacturer"
+                                        value="${getItem.m_item_manufacturer}">${getItem.m_item_manufacturer}</option>
+                                    <%--                            <c:forEach items="${manufacturerList}" var="manufacturerList">--%>
+                                    <%--                                <option class="non"--%>
+                                    <%--                                        value="${manufacturerList.m_item_manufacturer}">${manufacturerList.m_item_manufacturer}</option>--%>
+                                    <%--                            </c:forEach>--%>
+                                <option class="manufacturerEditable" value="입력">입력</option>
+                            </select>
+                        </c:if>
+                        <c:if test="${getItem.m_item_manufacturer ne null}">
+                            <input type="text" name="m_item_manufacturer" class="form-control gray" readonly
+                                   value="${getItem.m_item_manufacturer}">
+                        </c:if>
+                        <input type="hidden" class="manufacturerEditOption form-control"
+                               value="${getItem.m_item_manufacturer}" autocomplete='off' onkeydown="activeBtn()"
                                style="width: 280px;border-bottom-right-radius: 0;border-top-right-radius: 0;">
                     </td>
                 </tr>

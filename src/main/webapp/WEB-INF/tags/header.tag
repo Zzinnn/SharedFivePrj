@@ -10,6 +10,7 @@
 <c:url value="/order/list" var="orderList"></c:url>
 <c:url value="/order/adminList" var="adminList"></c:url>
 <c:url value="/report/orderReport" var="reportLink"></c:url>
+<c:url value="/main/main" var="mainLink"></c:url>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Gothic+A1:wght@200;300;400;500&display=swap" rel="stylesheet">
@@ -143,11 +144,11 @@
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-<%--<button class="navbar-toggler sideBtn" type="button" aria-label="Toggle navigation" style="margin-left: 20px"--%>
-<%--        data-bs-toggle="collapse"--%>
-<%--        data-bs-target="#sideBar-collapse" aria-expanded="false">--%>
-<%--    <i class="fas fa-bars"></i>--%>
-<%--</button>--%>
+<button class="navbar-toggler sideBtn" type="button" aria-label="Toggle navigation" style="margin-left: 20px"
+        data-bs-toggle="collapse"
+        data-bs-target="#sideBar-collapse" aria-expanded="false">
+    <i class="fas fa-bars"></i>
+</button>
 <div id="sideBar-collapse" class="sideBtn collapse" style="margin-left: 20px">
     <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
@@ -232,7 +233,7 @@
 
     <div>
 
-        <a href="${reportLink}" class=" navbg d-flex align-items-center pb-3 mb-3 text-decoration-none border-bottom">
+        <a href="${mainLink}" class=" navbg d-flex align-items-center pb-3 mb-3 text-decoration-none border-bottom">
             <span class="navbg fs-5 fw-semibold">
                 <i class="fa-solid fa-dice-five mainicon"></i>
                 SharedFive</span>

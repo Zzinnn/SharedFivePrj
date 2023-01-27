@@ -40,11 +40,6 @@
             position: relative;
         }
 
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
-            background-color: #eeeeee;
-        }
-
         .table {
             /*width: 1000px;*/
             --bs-table-bg: #fff;

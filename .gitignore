@@ -59,3 +59,4 @@ custom.properties
 /src/main/webapp/WEB-INF/views/tteesstt/test.jsp
 /src/main/java/com/soprj/sharedone_prj/controller/tteesstt/TteessttController.java
 /src/main/webapp/WEB-INF/views/tteesstt/u.jsp
+register.jsp
